@@ -3,13 +3,10 @@ package com.larrykim;
 public class Main {
 
     public static void main(String[] args) {
-        NutritionFacts cocaCola = new NutritionFacts();
-        cocaCola.setServingSize(240);
-        cocaCola.setServings(8);
-        cocaCola.setCalories(100);
-        cocaCola.setSodium(35);
-        cocaCola.setCarbohydrate(27);
+        NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
+                .calories(100).sodium(35).carbohydrate(27).build();
 
         System.out.println(cocaCola.toString());
     }
+
 }
