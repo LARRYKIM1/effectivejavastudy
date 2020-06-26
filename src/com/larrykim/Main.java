@@ -1,12 +1,21 @@
 package com.larrykim;
 
+import static com.larrykim.NyPizza.Size.LARGE;
+import static com.larrykim.Pizza.Topping.*;
+
 public class Main {
-
     public static void main(String[] args) {
-        NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
-                .calories(100).sodium(35).carbohydrate(27).build();
+        NyPizza newyorkPizza =
+                new NyPizza.Builder(LARGE)
+                        .addTopping(HAM)
+                        .addTopping(ONION).build();
+        Calzone calzonePizza =
+                new Calzone.Builder()
+                        .addTopping(HAM)
+                        .sauceInside().build();
 
-        System.out.println(cocaCola.toString());
+        System.out.println("주문하신 피자");
+        System.out.println(newyorkPizza.toString());
+        System.out.println(calzonePizza.toString());
     }
-
 }
