@@ -1,41 +1,23 @@
 package com.larrykim;
 
 public class NutritionFacts {
-    private final int servingSize; // 1회 제공량 표기
-    private final int servings; // 총 n회 제공량 표기
-    private final int calories;
-    private final int fat;
-    private final int sodium;
-    private final int carbohydrate;
 
-    public NutritionFacts(int servingSize, int servings) {
-        this(servingSize, servings, 0);
-    }
+    private int servingSize = -1;
+    private int servings = -1;
+    private int calories = 0;
+    private int fat = 0;
+    private int sodium = 0;
+    private int carbohydrate = 0;
 
-    public NutritionFacts(int servingSize, int servings,
-                          int calories) {
-        this(servingSize, servings, calories, 0);
-    }
+    public NutritionFacts() { }
 
-    public NutritionFacts(int servingSize, int servings,
-                          int calories, int fat) {
-        this(servingSize, servings, calories, fat, 0);
-    }
-
-    public NutritionFacts(int servingSize, int servings,
-                          int calories, int fat, int sodium) {
-        this(servingSize, servings, calories, fat, sodium, 0);
-    }
-
-    public NutritionFacts(int servingSize, int servings,
-                          int calories, int fat, int sodium, int carbohydrate) {
-        this.servingSize = servingSize;
-        this.servings = servings;
-        this.calories = calories;
-        this.fat = fat;
-        this.sodium = sodium;
-        this.carbohydrate = carbohydrate;
-    }
+    // Setters
+    public void setServingSize(int val) { servingSize = val; }
+    public void setServings(int val) { servings = val; }
+    public void setCalories(int val) { calories = val; }
+    public void setFat(int val) { fat = val; }
+    public void setSodium(int val) { sodium = val; }
+    public void setCarbohydrate(int val) { carbohydrate = val; }
 
     @Override
     public String toString() {
